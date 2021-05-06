@@ -1,12 +1,22 @@
 const express = require("express");
 const app = express();
 const connectDb = require("./config/connection.js");
+const port = process.env.PORT;
 require("dotenv").config();
+require("./controller/Post")(app);
+
+app.use(express.json({ extended: false }));
 
 connectDb();
-app.use(express.json({ extended: false }));
-const port = process.env.PORT || 3001;
 
-app.listen(port, () => {
-    console.log("Server running on port 3001");
+//import routes
+const postsRoute = require("./Routes/posts");
+
+app.use("/posts", postsRoute);
+
+app.listen(port, (err) => {
+    if (err) {
+        console.log(err);
+    }
+    console.log(`Server running on port ${port}`);
 });
