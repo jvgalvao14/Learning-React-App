@@ -1,10 +1,25 @@
-import React, { useState, useEffect } from "react";
+import react, { useEffect, useState } from "react";
 import "./App.css";
+import axios from "axios";
 
 function App() {
+    const [postList, setPostList] = useState([]);
+    useEffect(() => {
+        axios.get("http://localhost:3001/posts").then((response) => {
+            setPostList(response.data);
+        });
+    }, []);
     return (
-        <div>
-            <h1>Limão</h1>
+        <div className="App">
+            {postList.map((value, key) => {
+                return (
+                    <div className="post">
+                        <div className="title">{value.title}</div>
+                        <div className="body">{value.postText}</div>
+                        <div className="footer">{value.username}</div>
+                    </div>
+                );
+            })}
         </div>
     );
 }

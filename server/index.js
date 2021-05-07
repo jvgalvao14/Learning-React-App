@@ -1,12 +1,14 @@
 const express = require("express");
-const app = express();
 const connectDb = require("./config/connection.js");
+const app = express();
 const port = process.env.PORT;
+const cors = require("cors");
 
 require("dotenv").config();
 require("./controller/Post")(app);
 
 app.use(express.json({ extended: false }));
+app.use(cors());
 
 //connecting to the DB
 connectDb();
