@@ -13,10 +13,8 @@ connectDb();
 
 //import routes
 const postsRoute = require("./Routes/posts");
-const getRoute = require("./Routes/get");
 //using routes
 app.use("/posts", postsRoute);
-app.use("/get", getRoute);
 
 //listening to the port
 app.listen(port, (err) => {
