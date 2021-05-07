@@ -2,29 +2,11 @@
 
 .App {
     width: 100vw;
-    height: auto;
-    display: flex;
-    align-items: center;
-    padding-top: 40px;
-    flex-direction: column;
-    background: linear-gradient(45deg, #5abcb9, #6ef9f5);
+    height: 100vh;
+
+    background: linear-gradient(45deg, #ffcc00, #fff702);
 }
 body {
     margin: 0;
     padding: 0;
-}
-.post {
-    background-color: #399e5a;
-    width: 400px;
-    height: 300px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    border: 1px solid lightgray;
-    font-family: "Poppins", sans-serif;
-}
-.title {
-    left: 10px;
-    top: 5px;
 }
