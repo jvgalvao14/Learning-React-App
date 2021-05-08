@@ -14,7 +14,7 @@ function App() {
         <div className="App">
             {postList.map((value, key) => {
                 return (
-                    <div className="post">
+                    <div>
                         <Post
                             title={value.title}
                             body={value.postText}
