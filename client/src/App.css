@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
 * {
     margin: 0;
     border: 0;
@@ -11,4 +13,37 @@
     padding-top: 40px;
     flex-direction: column;
     background-color: #d8dbe2;
+    font-family: "Lato", sans-serif;
+}
+.post {
+    width: 500px;
+    height: 400px;
+    padding: 30px;
+    position: relative;
+    margin-bottom: 100px;
+    border-radius: 50px;
+    border: 2px solid #58a4b0;
+    background-color: #a9bcd0;
+    box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 35px;
+    left: 50px;
+}
+.body {
+    font-size: 30px;
+    position: absolute;
+    top: 85px;
+    left: 50px;
+}
+.footer {
+    font-size: 30px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 35px;
+    left: 50px;
 }
