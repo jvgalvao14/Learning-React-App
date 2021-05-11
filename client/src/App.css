@@ -6,14 +6,16 @@
     padding: 0;
     box-sizing: content-box;
 }
+body {
+    background-color: #d8dbe2;
+}
 .App {
     width: 100vw;
-    height: 100vh;
+    height: 100;
     display: flex;
     align-items: center;
     padding-top: 50px;
     flex-direction: column;
-    background-color: #d8dbe2;
     font-family: "Lato", sans-serif;
 }
 

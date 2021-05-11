@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 
 function CreatePost() {
     const initialValues = {
@@ -17,7 +18,11 @@ function CreatePost() {
             .required("You must type a username!"),
     });
     const onSubmit = (data) => {
-        console.log(data);
+        axios
+            .post("http://localhost:3001/posts/create", data)
+            .then((response) => {
+                console.log("IT WORKED");
+            });
     };
     return (
         <div className="createPostPage">
